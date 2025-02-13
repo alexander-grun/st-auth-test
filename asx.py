@@ -25,7 +25,8 @@ def store_user(email, name):
                      (email, name, datetime.now()))
 
 if not st.experimental_user.is_logged_in:
-    st.button("Log in with Google", on_click=st.login)
+    st.button("Log in with Google", on_click=st.login, args=["google"])
+    st.button("Log in with Microsoft", on_click=st.login, args=["microsoft"])
     st.stop()
 
 # Capture user info
